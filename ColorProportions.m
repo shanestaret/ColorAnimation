@@ -62,3 +62,23 @@ PercentOfGreen = (green/totalPixels) * 100
 PercentOfBlue = (blue/totalPixels) * 100
 PercentOfPurplePink = (purplepink/totalPixels) * 100
 PercentOfYellowOrange = (yelloworange/totalPixels) * 100
+
+%"here is the code for collecting bar graphs"
+
+a = PercentOfWhite;
+b = PercentOfBlack;
+
+c = PercentOfGrey;
+d = PercentOfRed;
+e = PercentOfGreen;
+f = PercentOfBlue;
+% 
+% bar(c,'r');
+% bar(b,'b');
+% bar(a,'B');
+% bar(d,'y');
+% bar(e,'g');
+% bar(f,'w');
+y = [ a b c d e f ]; % Gettin graphs 
+bar(y) % the y get's graphs 
+
