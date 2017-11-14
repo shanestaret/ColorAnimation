@@ -142,17 +142,23 @@ PercentOfBlue = (blue/totalPixels) * 100
 
 Bar = [PercentOfWhite PercentOfBlack PercentOfGrey PercentOfRed PercentOfGreen PercentOfBlue];
 
-Test = BarGraphs(Bar, BarNames, Colors, 'Original Image Graph','Colors', 'Proportion (%)',1)
-Test1 = BarGraphs(Bar2, BarNames, Colors, 'Manipulated Image Graph', 'Colors', 'Proportion (%)', 1);
-Test2 = StackedGraphs(Bar, Colors)
+OriginalGraph = BarGraphs(Bar, BarNames, Colors, 'Original Image Graph','Colors', 'Proportion (%)',1)
+ManipGraph = BarGraphs(Bar2, BarNames, Colors, 'Manipulated Image Graph', 'Colors', 'Proportion (%)', 1);
+Test2 = StackedGraphs(Bar, Colors);
 for i = 1:length(Bar)
     Bar3(i) = [abs(Bar(i) - Bar2(i))];
 end
-Test3 = BarGraphs(Bar3, BarNames, Colors, 'Difference Image Graph', 'Colors', 'Proportion (%)', 1);
+DifferenceGraph = BarGraphs(Bar3, BarNames, Colors, 'Difference Image Graph', 'Colors', 'Proportion (%)', 1);
+OriginalLine = ColorLine(PercentOfWhite, PercentOfBlack, PercentOfGrey, PercentOfRed, PercentOfGreen, PercentOfBlue);
+ManipLine = ColorLine(PercentOfWhite2, PercentOfBlack2, PercentOfGrey2, PercentOfRed2, PercentOfGreen2, PercentOfBlue2);
+threeDTest = ThreeDCluster(Bar, 'Original 3D Cluster', PercentOfWhite, PercentOfBlack, PercentOfGrey, PercentOfRed, PercentOfGreen, PercentOfBlue);
 
 figure('units','normalized','outerposition',[0 0 1 1])
-subplot(2,3,1), imshow('DisneyColorfulLogo.jpg'); title('Original Image', 'FontSize', 16); %displays full path along with a title
-subplot(2,3,2), imshow(ManipulatedImageFinal, []); title('Manipulated Image', 'FontSize', 16);
-subplot(2,3,3), Test.createGraph;
-subplot(2,3,4), Test1.createGraph;
-subplot(2,3,5), Test3.createGraph;
+subplot(3,3,1), imshow('DisneyColorfulLogo.jpg'); title('Original Image', 'FontSize', 16); %displays full path along with a title
+subplot(3,3,2), imshow(ManipulatedImageFinal, []); title('Manipulated Image', 'FontSize', 16);
+subplot(3,3,4), OriginalGraph.createGraph;
+subplot(3,3,5), ManipGraph.createGraph;
+subplot(3,3,6), DifferenceGraph.createGraph;
+subplot(3,3,7), OriginalLine.drawLine; title('Original Image Color Variation Line', 'FontSize', 16);
+subplot(3,3,8), ManipLine.drawLine; title('Manipulated Image Color Variation Line', 'FontSize', 16);
+subplot(3,3,9), threeDTest.createGraph;
