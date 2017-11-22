@@ -3,7 +3,6 @@ classdef BarGraphs < GraphInterface %implements the interface "GraphInterface"; 
     properties
         Width
         Name %defining all important properties that need to be defined in constructor specifically
-        Color
     end
     
     methods
@@ -32,7 +31,7 @@ classdef BarGraphs < GraphInterface %implements the interface "GraphInterface"; 
             yrule.FontSize = 8;
             % Change properties of the label
             yL.FontSize = 16;
-            ax.XTick = [1:col1 + 1];
+            ax.XTick = 1:col1;
             ax.XTickLabel = graphObj.Name;
             xrule.FontSize = 6;
             % Change properties of the label

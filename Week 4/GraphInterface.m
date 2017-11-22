@@ -2,7 +2,8 @@ classdef GraphInterface < handle % Abstract class for creating data graphs; acts
     
     properties %enables you to customize the behavior of properties for specific purposes
         Data %property name Data
-        Title %property name Color
+        Title 
+        Color %property name Color
         Plot %property name Plot
         xLabel
         yLabel

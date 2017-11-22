@@ -3,7 +3,7 @@ clear all %deletes all values in previous variables
 clc %clearing the command window just to make life easier
 close all
 folder = fullfile('C:\Users\Shane\Desktop\MATLAB'); %locating the folder of the desired image
-fileDesired = 'Wallpaper.png'; %giving the desired name of the file we want
+fileDesired = 'SampleVideo.mp4'; %giving the desired name of the file we want
 fullPath = fullfile(folder, fileDesired); %assigning the filename based to the rest of the path (C:\Users\Shane\Desktop\MATLAB)
 % Get the full filename, along with the path in which it exists
     if ~exist(fullPath, 'file')
@@ -23,26 +23,25 @@ ManipulatedImage = imread(fullPath); %duplicate of initial image, but we are goi
 Manipulation = ImageManipulation(ManipulatedImage); %the object that we will use to properly manipulate the image
 ManipulatedImageFinal = Manipulation.manipulate; %the variable that the final manipulated image is stored in; call the method that actually manipulates the image in the "ImageManipulation" class
 
-initial = ColorProportions(InitialImage); %the object that we will use to get the proportions for initial image
-initialProps = initial.proportions; %the array of proportions for the original image; use the method in "ColorProportions" class to get the proportions
-manipulated = ColorProportions(ManipulatedImageFinal); %the object that we will use to get the proportions for manipulated image
+BarNames = ["White", "DarkRed", "Red", "LightRed", "DarkOrange", "Orange", "LightOrange", "DarkYellow", "Yellow", "LightYellow", "DarkGreen", "Green", "LightGreen", "DarkSkyBlue", "SkyBlue", "LightSkyBlue", "DarkBlue", "Blue", "LightBlue", "DarkPurple", "Purple", "LightPurple", "DarkPink", "Pink", "LightPink", "DarkHotPink", "HotPink", "LightHotPink", "DarkGrey", "Grey", "LightGrey", "Black"]; %array with the names of each color found in image
+Colors = [255/255 255/255 255/255; 102/255 0/255 0/255; 255/255 0/255 0/255; 255/255 153/255 153/255; 102/255 51/255 0/255; 255/255 128/255 0/255; 255/255 204/255 153/255; 102/255 102/255 0/255; 255/255 255/255 0/255; 255/255 255/255 153/255; 0/255 102/255 0/255; 0/255 255/255 0/255; 153/255 255/255 153/255; 0/255 102/255 102/255; 0/255 255/255 255/255; 153/255 255/255 255/255; 0/255 0/255 102/255; 0/255 255/255 255/255; 153/255 153/255 255/255; 51/255 0/255 102/255; 127/255 0/255 255/255; 204/255 153/255 255/255; 102/255 0/255 102/255; 255/255 0/255 255/255; 255/255 153/255 255/255; 102/255 0/255 51/255; 255/255 0/255 127/255; 255/255 153/255 204/255; 64/255 64/255 64/255; 128/255 128/255 128/255; 224/255 224/255 224/255; 0/255 0/255 0/255;];
+
+initial = ColorProportions(InitialImage, BarNames); %the object that we will use to get the proportions for initial image
+initialProps = initial.proportions;
+manipulated = ColorProportions(ManipulatedImageFinal, BarNames); %the object that we will use to get the proportions for manipulated image
 manipulatedProps = manipulated.proportions; %the array of proportions for the manipulated image; use the method in "ColorProportions" class to get the proportions
 
-BarNames = ["Grey", "Silv", "SGrey", "ABlue", "CBlue1", "CBlue4", "CoBlue", "LCoBlue", "Turq1", "SBlue", "DBlue", "LSBlue", "LSlBlue", "Aqua", "MBlue", "LAqua", "RBrwn", "SBrwn1", "SBrwn2", "Brwn", "DBrwn", "BWood", "BChoc", "Choc", "Tan", "Grn", "Bisq", "Coral", "Orng", "OrngN", "OrngR1", "HPink", "OrngR2", "LPink", "Red", "Tmto", "Pink", "Salm", "Scar", "DViol", "Mgnta", "Mar", "Prp", "Turq2", "Vio", "VioR", "Whte", "Blck"]; %array with the names of each color found in image
-Colors = [84/255 84/255 84/255; 192/255 192/255 192/255; 47/255 79/255 79/255; 240/255 248/255 255/255; 152/255 245/255 255/255; 83/255 134/255 139/255; 66/255 66/255 111/255; 100/255 149/255 237/255; 0/255 206/255 209/255; 0/255 191/255 255/255; 30/255 144/255 255/255; 164/255 211/255 238/255; 132/255 112/255 255/255; 112/255 219/255 147/255; 0/255 0/255 205/255; 127/255 255/255 212/255; 255/255 193/255 193/255; 139/255 69/255 19/255; 244/255 164/255 96/255; 165/255 42/255 42/255; 92/255 64/255 51/255; 222/255 184/255 135/255; 92/255 51/255 23/255; 210/255 105/255 30/255; 219/255 147/255 112/255; 0/255 255/255 0/255; 255/255 228/255 196/255; 255/255 127/255 0/255; 255/255 165/255 0/255; 255/255 127/255 0/255; 255/255 36/255 0/255; 255/255 105/255 180/255; 255/255 69/255 0/255; 255/255 192/255 203/255; 255/255 0/255 0/255; 255/255 99/255 71/255; 188/255 143/255 143/255; 111/255 66/255 66/255; 140/255 23/255 23/255; 148/255 0/255 211/255; 255/255 0/255 255/255; 176/255 48/255 96/255; 160/255 32/255 240/255; 173/255 234/255 234/255; 79/255 47/255 79/255; 204/255 50/255 153/255; 255/255 255/255 255/255; 0/255 0/255 0/255;];                        %RGB value for corresponding color
-size(Colors)
-size(BarNames)
-OriginalGraph = BarGraphs(initialProps, BarNames, Colors, 'Original Image Graph','Colors', 'Proportion (%)',1); %creating original bar graph object
+OriginalGraph = BarGraphs(initialProps, BarNames, Colors, 'Original Image Graph','Colors', 'Proportion (%)', 1); %creating original bar graph object
 ManipGraph = BarGraphs(manipulatedProps, BarNames, Colors, 'Manipulated Image Graph', 'Colors', 'Proportion (%)', 1); %creating manipulated bar graph object
 for i = 1:length(initialProps) %creating difference bar graph array
    DifferenceGraphObj(i) = [abs(initialProps(i) - manipulatedProps(i))];
 end
 
 DifferenceGraph = BarGraphs(DifferenceGraphObj, BarNames, Colors, 'Difference Image Graph', 'Colors', 'Proportion (%)', 1); %creating difference bar graph object
-OriginalLine = ColorLine(initialProps(1), initialProps(2), initialProps(3), initialProps(4), initialProps(5), initialProps(6), xStart, totalFrames); %creating the color variation line object for original image
-ManipLine = ColorLine(manipulatedProps(1), manipulatedProps(2), manipulatedProps(3), manipulatedProps(4), manipulatedProps(5), manipulatedProps(6), xStart, totalFrames); %creating the color variation line object for manipulated image
-threeDTest = ThreeDCluster(initialProps, 'Original 3D Cluster'); %creating the 3D cluster object for original image
-threeDTest2 = ThreeDCluster(manipulatedProps, 'Manipulated Image 3D Cluster'); %creating the 3D cluster object for original image
+OriginalLine = ColorLine(initialProps, xStart, totalFrames, Colors); %creating the color variation line object for original image
+ManipLine = ColorLine(manipulatedProps, xStart, totalFrames, Colors); %creating the color variation line object for manipulated image
+threeDTest = ThreeDCluster(initialProps, Colors, 'Original 3D Cluster'); %creating the 3D cluster object for original image
+threeDTest2 = ThreeDCluster(manipulatedProps, Colors, 'Manipulated Image 3D Cluster'); %creating the 3D cluster object for original image
 
 main = figure('units','normalized','outerposition',[0 0 1 1])
 bars = figure('units','normalized','outerposition',[0 0 1 1])
@@ -88,27 +87,26 @@ ManipulatedImage = image_data; %duplicate of initial image, but we are going to 
 Manipulation = ImageManipulation(ManipulatedImage); %the object that we will use to properly manipulate the image
 ManipulatedImageFinal = Manipulation.manipulate; %the variable that the final manipulated image is stored in; call the method that actually manipulates the image in the "ImageManipulation" class
 
-initial = ColorProportions(InitialImage); %the object that we will use to get the proportions for initial image
-initialProps = initial.proportions; %the array of proportions for the original image; use the method in "ColorProportions" class to get the proportions
-manipulated = ColorProportions(ManipulatedImageFinal); %the object that we will use to get the proportions for manipulated image
+BarNames = ["White", "DarkRed", "Red", "LightRed", "DarkOrange", "Orange", "LightOrange", "DarkYellow", "Yellow", "LightYellow", "DarkGreen", "Green", "LightGreen", "DarkSkyBlue", "SkyBlue", "LightSkyBlue", "DarkBlue", "Blue", "LightBlue", "DarkPurple", "Purple", "LightPurple", "DarkPink", "Pink", "LightPink", "DarkHotPink", "HotPink", "LightHotPink", "DarkGrey", "Grey", "LightGrey", "Black"]; %array with the names of each color found in image
+Colors = [255/255 255/255 255/255; 102/255 0/255 0/255; 255/255 0/255 0/255; 255/255 153/255 153/255; 102/255 51/255 0/255; 255/255 128/255 0/255; 255/255 204/255 153/255; 102/255 102/255 0/255; 255/255 255/255 0/255; 255/255 255/255 153/255; 0/255 102/255 0/255; 0/255 255/255 0/255; 153/255 255/255 153/255; 0/255 102/255 102/255; 0/255 255/255 255/255; 153/255 255/255 255/255; 0/255 0/255 102/255; 0/255 255/255 255/255; 153/255 153/255 255/255; 51/255 0/255 102/255; 127/255 0/255 255/255; 204/255 153/255 255/255; 102/255 0/255 102/255; 255/255 0/255 255/255; 255/255 153/255 255/255; 102/255 0/255 51/255; 255/255 0/255 127/255; 255/255 153/255 204/255; 64/255 64/255 64/255; 128/255 128/255 128/255; 224/255 224/255 224/255; 0/255 0/255 0/255;];                   %RGB value for corresponding color
+
+initial = ColorProportions(InitialImage, BarNames); %the object that we will use to get the proportions for initial image
+initialProps = initial.proportions;
+S = sum(initialProps)
+manipulated = ColorProportions(ManipulatedImageFinal, BarNames); %the object that we will use to get the proportions for manipulated image
 manipulatedProps = manipulated.proportions; %the array of proportions for the manipulated image; use the method in "ColorProportions" class to get the proportions
 
-BarNames = ["Grey", "Silv", "SGrey", "ABlue", "CBlue1", "CBlue4", "CoBlue", "LCoBlue", "Turq1", "SBlue", "DBlue", "LSBlue", "LSlBlue", "Aqua", "MBlue", "LAqua", "RBrown", "SadBrown", "SanBrown", "Brown", "DBrown", "BWood", "BChoco", "Choco", "Tan", "Green", "Bisq", "Coral", "Orange", "OrangeN", "OrangeR1", "HotPink", "OrangeR2", "LPink", "Red", "Tomato", "Pink", "Salm", "Scar", "DViolet", "Magenta", "Maroon", "Purple", "Turq2", "Violet", "VioletR", "White", "Black"]; %array with the names of each color found in image
-Colors = [84/255 84/255 84/255; 192/255 192/255 192/255; 47/255 79/255 79/255; 240/255 248/255 255/255; 152/255 245/255 255/255; 83/255 134/255 139/255; 66/255 66/255 111/255; 100/255 149/255 237/255; 0/255 206/255 209/255; 0/255 191/255 255/255; 30/255 144/255 255/255; 164/255 211/255 238/255; 132/255 112/255 255/255; 112/255 219/255 147/255; 0/255 0/255 205/255; 127/255 255/255 212/255; 255/255 193/255 193/255; 139/255 69/255 19/255; 244/255 164/255 96/255; 165/255 42/255 42/255;
-92/255 64/255 51/255; 222/255 184/255 135/255; 92/255 51/255 23/255; 210/255 105/255 30/255; 219/255 147/255 112/255; 0/255 255/255 0/255; 255/255 228/255 196/255; 255/255 127/255 0/255; 255/255 165/255 0/255; 255/255 127/255 0/255; 255/255 36/255 0/255; 255/255 105/255 180/255; 255/255 69/255 0/255; 255/255 192/255 203/255; 255/255 0/255 0/255; 255/255 99/255 71/255; 188/255 143/255 143/255; 111/255 66/255 66/255; 140/255 23/255 23/255; 148/255 0/255 211/255; 255/255 0/255 255/255; 176/255 48/255 96/255;
-160/255 32/255 240/255; 173/255 234/255 234/255; 79/255 47/255 79/255; 204/255 50/255 153/255; 255/255 255/255 255/255; 0/255 0/255 0/255;];                        %RGB value for corresponding color
-
-OriginalGraph = BarGraphs(initialProps, BarNames, Colors, 'Original Image Graph','Colors', 'Proportion (%)',1); %creating original bar graph object
+OriginalGraph = BarGraphs(initialProps, BarNames, Colors, 'Original Image Graph','Colors', 'Proportion (%)', 1); %creating original bar graph object
 ManipGraph = BarGraphs(manipulatedProps, BarNames, Colors, 'Manipulated Image Graph', 'Colors', 'Proportion (%)', 1); %creating manipulated bar graph object
 for i = 1:length(initialProps) %creating difference bar graph array
    DifferenceGraphObj(i) = [abs(initialProps(i) - manipulatedProps(i))];
 end
 
 DifferenceGraph = BarGraphs(DifferenceGraphObj, BarNames, Colors, 'Difference Image Graph', 'Colors', 'Proportion (%)', 1); %creating difference bar graph object
-OriginalLine = ColorLine(initialProps(1), initialProps(2), initialProps(3), initialProps(4), initialProps(5), initialProps(6), xStart, numberOfLines); %creating the color variation line object for original image
-ManipLine = ColorLine(manipulatedProps(1), manipulatedProps(2), manipulatedProps(3), manipulatedProps(4), manipulatedProps(5), manipulatedProps(6), xStart, numberOfLines); %creating the color variation line object for manipulated image
-threeDTest = ThreeDCluster(initialProps, 'Original Image 3D Cluster'); %creating the 3D cluster object for original image
-threeDTest2 = ThreeDCluster(manipulatedProps, 'Manipulated Image 3D Cluster'); %creating the 3D cluster object for original image
+OriginalLine = ColorLine(initialProps, xStart, numberOfLines, Colors); %creating the color variation line object for original image
+ManipLine = ColorLine(manipulatedProps, xStart, numberOfLines, Colors); %creating the color variation line object for manipulated image
+threeDTest = ThreeDCluster(initialProps, Colors, 'Original 3D Cluster'); %creating the 3D cluster object for original image
+threeDTest2 = ThreeDCluster(manipulatedProps, Colors, 'Manipulated Image 3D Cluster'); %creating the 3D cluster object for original image
 
 if(firstFrame)
 main = figure('units','normalized','outerposition',[0 0 1 1])
