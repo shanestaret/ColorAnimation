@@ -1,6 +1,5 @@
 classdef ImageManipulation %class to manipulate an image given
-    %UNTITLED2 Summary of this class goes here
-    %   Detailed explanation goes here
+
     
     properties
         imageToManip
@@ -14,16 +13,16 @@ classdef ImageManipulation %class to manipulate an image given
         
         function imageObj = manipulate(imageObj)
         transferStructure = makecform('srgb2lab'); %variable that allows us to build a structure to change the color of the image
-        lab = applycform(imageObj.imageToManip, transferStructure); %converting the transfer structure to a lab color space, so we can actually manipulate the individual R, G, and B numbers along with brightness/luminosity
-        L_channel = lab(:,:,1); %alters the brightness by 1
-        A_channel = lab(:,:,2); %alters color of red/green color axis by 2
-        B_channel = lab(:,:,3); %alters color of yellow/blue color axis by 3
-        L_channelNew = 100 - L_channel; %Essentially decreasing the brightness by 1
+        labImageType = applycform(imageObj.imageToManip, transferStructure); %converting the transfer structure to a lab color space, so we can actually manipulate the individual R, G, and B numbers along with brightness/luminosity
+        Luminosity = labImageType(:,:,1); %creates an array that contains all of the "luminosity" values for each pixel
+        RedGreen = labImageType(:,:,2); %creates an array that contains all of the "red/green" values for each pixel
+        BlueYellow = labImageType(:,:,3); %creates an array that contains all of the "yellow/blue" values for each pixel
+        LuminosityChanged = 100 - Luminosity; %Essentially decreasing the brightness; the more bright the image initially was, the less bright it will be now
 
-        A_channelNew = 255-A_channel; %Essentially decreasing red/green color axis by 2 (basically, flips the red and green colors)
-        newColor = cat(3, L_channelNew, A_channelNew, B_channel); %array that holds the new lab color space values, it is important these values can convert to RGB, otherwise an error will occur
+        RedGreenChanged = 255-RedGreen; %Essentially decreasing red/green color axis, the more red/green it was, the less it will be now (red and green essentially switch)
+        newColorStructure = cat(3, LuminosityChanged, RedGreenChanged, BlueYellow); %array that holds the new lab color space values, it is important these values can convert to RGB, otherwise an error will occur
         secondTransfer = makecform('lab2srgb'); %converting from lab color space back to RGB
-        imageObj.ManipulatedImageFinal = applycform(newColor,secondTransfer); %applying all of these changes to the manipulated image
+        imageObj.ManipulatedImageFinal = applycform(newColorStructure,secondTransfer); %applying all of these changes to the manipulated image
         imageObj = imageObj.ManipulatedImageFinal; % this line makes everything work; it sets the object passed into the method as the image itself, so it can be returned to the "Driver" script as a manipulated image
         return %returns imageObj
         end

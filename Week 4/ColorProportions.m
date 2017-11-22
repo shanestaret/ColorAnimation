@@ -2,39 +2,38 @@ classdef ColorProportions %class to determine the color of each pixel and the ov
     
     properties
         img %defining all important properties that need to be defined in constructor specifically
-        colors
+        ColorNames
     end
     
     methods
         function colorObj = ColorProportions(i, c)
-            colorObj.img = i; %setting local variables to their parameter equivalent
-            colorObj.colors = c;
+            colorObj.img = i; %creates a local variable equivalent to the image passed to this class
+            colorObj.ColorNames = c; %the names of the colors that we want to get the proportion of
         end
         
         function colorObj = proportions(colorObj)
             totalPixels = 0; %complete # of pixels
-            colorProps = zeros(length(colorObj.colors),1);
-        frame_size = size(colorObj.img); %basically, determines the resolution of the image
-        red1 = colorObj.img(:,:,1); %array of all R values
-        green1 = colorObj.img(:,:,2); %array of all G values
-        blue1 = colorObj.img(:,:,3); % array of all B values
-        red_channel = reshape(red1, [], 1); %reshaping the array so it only has one column
-        green_channel = reshape(green1, [], 1); %reshaping the array so it only has one column
-        blue_channel = reshape(blue1, [], 1); %reshaping the array so it only has one column
-        allpixels = [(red_channel) (green_channel) (blue_channel)]; %creates an array of three columns, where the first column has the R value of a pixel, the second has the G, and the third has the B
-        [row,col] = size(allpixels); %creates an array so that we can loop through each row and col; the row is the height, whereas col is the width
+            colorProps = zeros(length(colorObj.ColorNames),1); %create an array that will hold all of the proportions of each color; initial values set to 0
+        redArray = colorObj.img(:,:,1); %array of all R values
+        greenArray = colorObj.img(:,:,2); %array of all G values
+        blueArray = colorObj.img(:,:,3); % array of all B values
+        redChannel = reshape(redArray, [], 1); %reshaping the array so it only has one column
+        greenChannel = reshape(greenArray, [], 1); %reshaping the array so it only has one column
+        blueChannel = reshape(blueArray, [], 1); %reshaping the array so it only has one column
+        allPixels = [(redChannel) (greenChannel) (blueChannel)]; %creates an array of three columns, where the first column has the R value of a pixel, the second has the G, and the third has the B
+        [row,col] = size(allPixels); %creates an array so that we can loop through each row and col; the row is the height, whereas col is the width
         for row = 1:row %looping through the first row till the last row
-            totalPixels = totalPixels + 1;
+            totalPixels = totalPixels + 1; %incrementing each time we move onto a new row, as each row represents one pixel
     count = 0; %determines whether we are looking at the R,G, or B part of the image; when it is 0, it is looking at the R channel; when it is 1, it is looking at the G channe; when it is 2, it is looking at B channel
     for col = 1:col %goes through every pixel AND its RGB channels, so the first THREE iterations are ONE pixel (if it was grayscale, TWO iterations would be ONE pixel)
         if count == 0
-            R = allpixels(row,col); %creates a separate array of ALL R channels for EVERY pixel
+            R = allPixels(row,col); %creates a separate array of ALL R channels for EVERY pixel
             count = count + 1;
         elseif count == 1
-            G = allpixels(row,col); %creates a separate array of ALL G channels for EVERY pixel
+            G = allPixels(row,col); %creates a separate array of ALL G channels for EVERY pixel
             count = count + 1;
         elseif count == 2
-            B = allpixels(row,col); %creates a separate array of ALL B channels for EVERY pixel
+            B = allPixels(row,col); %creates a separate array of ALL B channels for EVERY pixel
             count = count + 1;
         end
     end
@@ -103,11 +102,12 @@ classdef ColorProportions %class to determine the color of each pixel and the ov
             colorProps(27) = colorProps(27) + 1;
         elseif R > B && R > G && B > G && abs(R - G) >= 15 %Light Hot Pink
             colorProps(28) = colorProps(28) + 1;
-        
+        %IMPORTANT: The if statements are written to ensure that every
+        %pixel gets assigned a color
         end
         end
-colorProportions = (colorProps/totalPixels) * 100; %array containing all of the color proportions
-colorObj = colorProportions; %sets the object passed to the method equal to the actual array of color proportions; returns it to the "Driver" script so it can be used in other objects and classes
+colorProps = (colorProps/totalPixels) * 100; %array containing all of the color proportions; all elements are divided by total pixels to get proportion from 0 to 1, then multiplied by 100 to get percentage
+colorObj = colorProps; %sets the object passed to the method equal to the actual array of color proportions; returns it to the "Driver" script so it can be used in other objects and classes
 return %returns colorObj
         
         end
