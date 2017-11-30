@@ -1,21 +1,21 @@
 #include <Servo.h>
 Servo servol;
-int pos1=0;
-int pos2=0;
-int pos3=0;
-int pos4=0;
-int pos5=0;
-int pos6=0;
-int pos7=0;
-int pos8=0;
-int pos9=0;
-int pos10=0;
+int pos1;
+int pos2;
+int pos3;
+int pos4;
+int pos5;
+int pos6;
+int pos7;
+int pos8;
+int pos9;
+int pos10;
 
 void setup() {
   servol.attach(9);
   Serial.begin(9600);
   
-   pos9=162;
+   pos9=162; //Make sure the variable name and the number assign match up to the if else statements. So example pos1=18; pos2=36; etc..
   
   if(pos1==18){
     servol.write(18);
