@@ -1,0 +1,95 @@
+#include <Servo.h>
+Servo servol;
+int pos1=0;
+int pos2=0;
+int pos3=0;
+int pos4=0;
+int pos5=0;
+int pos6=0;
+int pos7=0;
+int pos8=0;
+int pos9=0;
+int pos10=0;
+
+void setup() {
+  servol.attach(9);
+  Serial.begin(9600);
+  
+   pos9=162;
+  
+  if(pos1==18){
+    servol.write(18);
+    Serial.println("The color is Red");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos2==36){
+    servol.write(36);
+    Serial.println("The color is Orange");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos3==54){
+    servol.write(54);
+    Serial.println("The color is Green");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos4==72){
+    servol.write(72);
+    Serial.println("The color is Blue");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos5==90){
+    servol.write(90);
+    Serial.println("The color is Purple");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos6==108){
+    servol.write(108);
+    Serial.println("The color is Pink");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos7==126){
+    servol.write(126);
+    Serial.println("The color is Red");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos8==144){
+    servol.write(144);
+    Serial.println("The color is Black");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos9==162){
+    servol.write(162);
+    Serial.println("The color is Grey");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(pos10==180){
+    servol.write(180);
+    Serial.println("The color is White");
+    delay(10000);
+    servol.write(1);
+  }
+  else{
+    Serial.println("Error");
+    delay(10000);
+    servol.write(0);
+  }
+
+
+}
+
+void loop() {
+
+ 
+  
+
+  }
+  
