@@ -3,7 +3,7 @@ clear all %deletes all values in previous variables
 clc %clearing the command window just to make life easier
 close all %closes all figures/files
 folder = fullfile('C:\Users\Shane\Desktop\MATLAB'); %locating the folder of the desired image
-fileDesired = 'MathFractal.mp4'; %giving the desired name of the file we want
+fileDesired = 'Purple.jpg'; %giving the desired name of the file we want
 fullPath = fullfile(folder, fileDesired); %assigning the filename based to the rest of the path (C:\Users\Shane\Desktop\MATLAB)
 % Get the full filename, along with the path in which it exists
     if ~exist(fullPath, 'file')
@@ -66,8 +66,7 @@ initial = ColorProportions(InitialImage, ColorNames); %the object that we will u
 initialProps = initial.proportions; %the array of proportions for the initial image; use the method in "ColorProportions" class to get the proportions
 
 fileID = fopen( 'propsArray.txt', 'w' ); %creates a text file which we will write to
-fprintf(fileID, '%d\n', initialProps); %writes the original image proportions to this text file so we can use the proportions in Java
-fclose(fileID); %closes the file
+fprintf(fileID, '%d\n', initialProps); %write
 
 manipulated = ColorProportions(ManipulatedImageFinal, ColorNames); %the object that we will use to get the proportions for manipulated image
 manipulatedProps = manipulated.proportions; %the array of proportions for the manipulated image; use the method in "ColorProportions" class to get the proportions
