@@ -14,6 +14,8 @@ public class Main {
         tp.pack();
         tp.setVisible(true);
 
-        double[] colorProps = ColorProportions.retrieveProps();
+        int colorProps = ColorProportions.retrieveMax();
+        System.out.println(colorProps);
+        }
     }
 }

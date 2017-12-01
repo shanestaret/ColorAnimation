@@ -12,7 +12,8 @@ public class ColorProportions {
     private static int count = 0;
     private static String line = null;
     private static double[] colors = new double[32];
-    public static double[] retrieveProps() throws IOException {
+    private static int maxColorIndex;
+    public static int retrieveMax() throws IOException {
         File txtFile = new File("C:\\Users\\Shane\\Desktop\\MATLAB\\propsArray.txt");
         FileReader reader = new FileReader(txtFile);
         BufferedReader bufferedReader = new BufferedReader(reader);
@@ -20,6 +21,12 @@ public class ColorProportions {
             colors[count] = Double.parseDouble(line);
             count++;
         }
-        return colors;
+        double max = 0;
+        for(int i = 0; i < colors.length; i++) {
+            if(colors[i] > max) {
+                maxColorIndex = i;
+                max = colors[i];
+            }
     }
+        return maxColorIndex;
 }
