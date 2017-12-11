@@ -8,7 +8,7 @@ public class FileCreator
         File fileOfMaxColorIndex = new File("C://Users//Shane//Desktop//maxColorIndex.txt"); //creates new text file on desktop
     
     	if (fileOfMaxColorIndex.createNewFile()) //prints whether the file was successfully created or not
-			System.out.println("File successfully created.");
+			System.out.println("New file successfully created.");
 		else
 			System.out.println("File updated.");
     
