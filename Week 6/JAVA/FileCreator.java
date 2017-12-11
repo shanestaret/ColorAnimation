@@ -7,7 +7,7 @@ public class FileCreator
   public static void create(int n) throws IOException {
         File fileOfMaxColorIndex = new File("C://Users//Shane//Desktop//maxColorIndex.txt"); //creates new text file on desktop
     
-    	if (fileOfMaxColorIndex.createNewFile())
+    	if (fileOfMaxColorIndex.createNewFile()) //prints whether the file was successfully created or not
 			System.out.println("File successfully created.");
 		else
 			System.out.println("File not created.");
