@@ -13,7 +13,7 @@ public class FileCreator
 			System.out.println("File not created.");
     
         FileWriter writer = new FileWriter(fileOfMaxColorIndex); //creates an object that can be used to write to the file we have created
-        writer.write(Integer.toString(n)); //writes the maxColorIndex to the text file, so if maxColorIndex is "3", the text file will now contain "3"
+        writer.write(Integer.toString(n)); //writes the maxColorIndex to the text file, so if maxColorIndex is "3", the text file will now contain "3" as a String
         writer.close(); //closes the object used to write to the text file
   }
 }
