@@ -25,5 +25,9 @@ public class Main {
         9 is Black
         So if "maxColorIndex" is 7, that means the servo should point to the "Pink" color on the color wheel
          */
+        File fileOfMaxColorIndex = new file("C://Users//Shane//Desktop");
+        FileWriter writer = new FileWriter(fileOfMaxColorIndex);
+        writer.write(maxColorIndex);
+        writer.close();
     }
 }
