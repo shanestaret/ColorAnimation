@@ -23,7 +23,8 @@ public class Main {
         7 is Pink (combination of DarkPink, Pink, LightPink, DarkHotPink, HotPink, and LightHotPink)
         8 is Grey (combination of DarkGrey, Grey, and LightGrey)
         9 is Black
-        So if "maxColorIndex" is 7, that means the servo should point to the "Pink" color on the color wheel
-         */
+        So if "maxColorIndex" is 7, that means the servo should point to the "Pink" color on the color wheel */
+        
+        FileCreator.create(maxColorIndex); //sending the maxColorIndex to a method in the "FileCreator" class that creates a file, and writes the maxColorIndex to that file
     }
 }
