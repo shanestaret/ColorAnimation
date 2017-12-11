@@ -8,9 +8,9 @@ public class FileCreator
         File fileOfMaxColorIndex = new File("C://Users//Shane//Desktop//maxColorIndex.txt"); //creates new text file on desktop
     
     	if (fileOfMaxColorIndex.createNewFile())
-			System.out.println("File is created!");
+			System.out.println("File successfully created.");
 		else
-			System.out.println("File already exists.");
+			System.out.println("File not created.");
     
         FileWriter writer = new FileWriter(fileOfMaxColorIndex); //creates an object that can be used to write to the file we have created
         writer.write(n); //writes the maxColorIndex to the text file, so if maxColorIndex is "3", the text file will now contain "3"
