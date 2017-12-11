@@ -1,3 +1,4 @@
+package com.company;
 import java.io.*; //import to properly create and write to the file
 
 // one class needs to have a main() method
