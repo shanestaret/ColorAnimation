@@ -1,11 +1,10 @@
-package com.company;
+package MATLAB;
 import java.io.*; //import to properly create and write to the file
 
-// one class needs to have a main() method
 public class FileCreator
 {
   public static void create(int n) throws IOException {
-	String fileLocation = "C://Users//Shane//Desktop//maxColorIndex.txt" //specify where the file should be saved
+	String fileLocation = "C://Users//Shane//Desktop//maxColorIndex.txt"; //specify where the file should be saved
         File fileOfMaxColorIndex = new File(fileLocation); //creates new text file on desktop
     
     	if (fileOfMaxColorIndex.createNewFile()) //prints whether the file was successfully created or not
