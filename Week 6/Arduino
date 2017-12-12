@@ -18,7 +18,6 @@ void loop() {
  //You have to subtract '0' from the read Byte to convert from text to a number.
  byteRead=byteRead-'0';
  
- //Turn off all LEDs if the byte Read = 0
  if(byteRead==0){
     servol.write(18);
     Serial.println("The color is Red");
