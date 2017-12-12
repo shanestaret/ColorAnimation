@@ -1,10 +1,10 @@
-package com.company;
+package MATLAB; //package MATLAB
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileReader; //Imports to read from a file
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.ArrayList; //import to utilize ArrayList
 
 /**
  * Created by Shane on 12/1/2017.
