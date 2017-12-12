@@ -9,6 +9,8 @@ servol.attach(9);
 
 void loop() {
  byte byteRead;
+ 
+ Serial.println(Serial1.available());
 
  /* check if data has been sent from the computer: */
  if (Serial.available()) {
