@@ -1,109 +1,55 @@
-package com.company;
+package MATLAB;//package MATLAB
 
-        import java.io.*;
-        import java.util.*;
-        import gnu.io.*;
+        import java.io.*;//imports the library's 
+        import java.util.*;//imports java library's 
+        import gnu.io.*;//used for arduio communication
 
-public class RXTX {
-    static Enumeration portList;
-    static CommPortIdentifier portId;
-    static int maxColorIndex;
-    static SerialPort serialPort;
-    static OutputStream outputStream;
+public class RXTX {//class RXTX. Rxtx is used primarily for communicating java and arduino
+    static Enumeration portList;// special data type that enables for a variable to be a set of predefined constants
+    static CommPortIdentifier portId;//used to identify the port the usb is connected to
+    static int maxColorIndex;//maxColorIndex created in Main class. The maxColorIndex assigns an index to every
+    //color from the MATLAB textfile and then sorts it into an Array from Max to Min. Outputs the max index.
+    static SerialPort serialPort; // used to get the port
+    static OutputStream outputStream;// is used for many things that you write to
 
-    public static void main(String[] args) {
-        portList = CommPortIdentifier.getPortIdentifiers();
+    public static void main(String[] args) {//main method
+    	
+        portList = CommPortIdentifier.getPortIdentifiers();//identifies the port and gets the port 
 
 
-        while (portList.hasMoreElements()) {
+        while (portList.hasMoreElements()) {// the portlist will have multiple COM ports
 
-            portId = (CommPortIdentifier) portList.nextElement();
-            if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
+            portId = (CommPortIdentifier) portList.nextElement();//initialize the portId
+            if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {//if the port id and the port
+            	//identified are the same then it will proceed
 
-                if (portId.getName().equals("COM3")) {
+                if (portId.getName().equals("COM3")) {//this is really important because you have to change it
+                	//so the "COM#" matches up to the one you just plugged in
 
-                    try {
-                        serialPort = (SerialPort)
-                                portId.open("SimpleWriteApp", 2000);
-                    } catch (PortInUseException e) {System.out.println("err");}
-                    try {
-                        outputStream = serialPort.getOutputStream();
-                    } catch (IOException e) {System.out.println("err1");}
-                    try {
+                    try {//if it matches, it will try this below
+                        serialPort = (SerialPort)//serialPort is initialized
+                                portId.open("SimpleWriteApp", 2000);//it will write a simple app
+                    } catch (PortInUseException e) {System.out.println("err");}//if the port is not found,
+                    //the "err" error shows up
+                    try {//will try
+                        outputStream = serialPort.getOutputStream();//it will try to write to the port
+                    } catch (IOException e) {System.out.println("err1");}//if it fails to do so
+                    //it will catch it and give "err1" error
+                    try {//will try
 
-                        serialPort.setSerialPortParams(9600,
-                                SerialPort.DATABITS_8,
-                                SerialPort.STOPBITS_1,
-                                SerialPort.PARITY_NONE);
-                    } catch (UnsupportedCommOperationException e) {System.out.println("err2");}
-                    try {
-
-                        int maxColorIndex = ColorProportions.retrieveMaxColor();
-                        System.out.println(maxColorIndex);
-                        RXTX ServoSpin1 = new RXTX();
-
-                        if(maxColorIndex == 0) {
-                            ServoSpin1.write(18);
-                            ServoSpin1.println("The color is Red");
-                            ServoSpin(10000);
-                            ServoSpin1.write(1);
-                            System.out.println("The Max Color is White");
-
-                        }else if(maxColorIndex == 1) {
-
-                            System.out.println("The Max Color is Red");
-
-                        }else if(maxColorIndex == 2) {
-
-                            System.out.println("The Max Color is Orange");
-
-                        }else if(maxColorIndex == 3) {
-
-                            System.out.println("The Max Color is Yellow");
-
-                        }else if(maxColorIndex == 4) {
-
-                            System.out.println("The Max Color is Green");
-
-                        }else if(maxColorIndex == 5) {
-
-                            System.out.println("The Max Color is Blue");
-
-                        }else if(maxColorIndex == 6) {
-                            System.out.println("The Max Color is Purple");
-                        }else if(maxColorIndex == 7) {
-                            System.out.println("The Max Color is Pink");
-                        }else if(maxColorIndex == 8) {
-                            System.out.println("The Max Color is Grey");
-                        }else if(maxColorIndex == 9){
-                            ServoSpin1.write(180);
-                            System.out.println("The Max Color is Black");
-                            ServoSpin(10000);
-                            ServoSpin1.write(1);
-                        }
-                        outputStream.close();
-                        serialPort.close();
-
-                    } catch (IOException e) {System.out.println("err3");}
+                        serialPort.setSerialPortParams(9600,//the 9600 is the baud
+                                SerialPort.DATABITS_8, //Bits that are sent 
+                                SerialPort.STOPBITS_1,// Bits that stop
+                                SerialPort.PARITY_NONE);//No connection
+                    } catch (UnsupportedCommOperationException e) {System.out.println("err2");}//If unable to
+                    //this error will print output will say "err2"
+                    try {//will try
+                        
+                        outputStream.close();//closes output stream
+                        serialPort.close();//closes serial port
+                        
+                    } catch (IOException e) {System.out.println("err3");}//if all fails then error 3 will result
+                    //output will say "err3"
                 }
             }
         }
-    }
-
-    private static void ServoSpin(int i) {
-        // TODO Auto-generated method stub
-
-    }
-
-    private void println(String string) {
-        // TODO Auto-generated method stub
-
-    }
-
-    private void write(int i) {
-        // TODO Auto-generated method stub
-
-    }
-
-
-}
