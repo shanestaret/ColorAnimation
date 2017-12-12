@@ -1,0 +1,89 @@
+#include <Servo.h>
+Servo servol;
+void setup() { 
+ // initialize the digital pins as an output.
+servol.attach(9);
+// Turn the Serial Protocol ON
+ Serial.begin(9600);
+}
+
+void loop() {
+ byte byteRead;
+
+ /* check if data has been sent from the computer: */
+ if (Serial.available()) {
+ 
+ /* read the most recent byte */
+ byteRead = Serial.read();
+ //You have to subtract '0' from the read Byte to convert from text to a number.
+ byteRead=byteRead-'0';
+ 
+ //Turn off all LEDs if the byte Read = 0
+ if(byteRead==18){
+    servol.write(18);
+    Serial.println("The color is Red");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==36){
+    servol.write(36);
+    Serial.println("The color is Orange");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==54){
+    servol.write(54);
+    Serial.println("The color is Green");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==72){
+    servol.write(72);
+    Serial.println("The color is Blue");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==90){
+    servol.write(90);
+    Serial.println("The color is Purple");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==108){
+    servol.write(108);
+    Serial.println("The color is Pink");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==126){
+    servol.write(126);
+    Serial.println("The color is Red");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==144){
+    servol.write(144);
+    Serial.println("The color is Black");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==162){
+    servol.write(162);
+    Serial.println("The color is Grey");
+    delay(10000);
+    servol.write(1);
+  }
+  else if(byteRead==180){
+    servol.write(180);
+    Serial.println("The color is White");
+    delay(10000);
+    servol.write(1);
+  }
+  else{
+    Serial.println("Error");
+    delay(10000);
+    servol.write(0);
+  }
+
+
+}
