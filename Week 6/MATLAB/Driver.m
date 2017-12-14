@@ -52,14 +52,14 @@ for i = 1:numberOfFramesDisplayed % Run the loop until all frames have been disp
     end
     if(isAnImage)
     InitialImage = imread(fullPath); %the initial, original image
-    ManipulatedImage = imread(fullPath); %duplicate of initial image, but we are going to change this one
+    DuplicatedImage = imread(fullPath); %duplicate of initial image, but we are going to change this one
     elseif(isAVid)
     oneFrameFromVid = im2uint8(oneFrameFromVid); %converting the frame into a type of image whose RGB values can properly be grabbed and manipulated
     InitialImage = oneFrameFromVid; %the initial, original image
-    ManipulatedImage = oneFrameFromVid; %duplicate of initial image, but we are going to change this one
+    DuplicatedImage = oneFrameFromVid; %duplicate of initial image, but we are going to change this one
     end
 % Display video frame one by one. Step allows us to keep repeating it. Its almost like a for loop that is incremented, or a while loop. It does not stop until the length is met.
-Manipulatable = ImageManipulation(ManipulatedImage); %the object that we will use to properly manipulate the image
+Manipulatable = ImageManipulation(DuplicatedImage); %the object that we will use to properly manipulate the image
 ManipulatedImageFinal = Manipulatable.manipulate; %the variable that the final manipulated image is stored in; call the method that actually manipulates the image in the "ImageManipulation" class
 
 initial = ColorProportions(InitialImage, ColorNames); %the object that we will use to get the proportions for initial image
