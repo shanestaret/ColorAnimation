@@ -75,10 +75,10 @@ manipulatedProps = manipulated.proportions; %the array of proportions for the ma
 OriginalGraph = BarGraphs(initialProps, ColorNames, ColorValues, 'Original Image Graph','Colors', 'Proportion (%)', 1); %creating original bar graph object
 ManipGraph = BarGraphs(manipulatedProps, ColorNames, ColorValues, 'Manipulated Image Graph', 'Colors', 'Proportion (%)', 1); %creating manipulated bar graph object
 for i = 1:length(initialProps) %creating difference bar graph array
-   DifferenceGraphObj(i) = [abs(initialProps(i) - manipulatedProps(i))]; %This gets the difference of each bar for the initial and manipulated bar graphs and puts it in an array; so if the original bar graph was 50% blue and the manipulated was 60%, then the difference bar graph shows a 10% difference
+   DifferenceGraphArray(i) = [abs(initialProps(i) - manipulatedProps(i))]; %This gets the difference of each bar for the initial and manipulated bar graphs and puts it in an array; so if the original bar graph was 50% blue and the manipulated was 60%, then the difference bar graph shows a 10% difference
 end
 
-DifferenceGraph = BarGraphs(DifferenceGraphObj, ColorNames, ColorValues, 'Difference Image Graph', 'Colors', 'Proportion (%)', 1); %creating difference bar graph object
+DifferenceGraph = BarGraphs(DifferenceGraphArray, ColorNames, ColorValues, 'Difference Image Graph', 'Colors', 'Proportion (%)', 1); %creating difference bar graph object
 OriginalLine = ColorLine(initialProps, ColorLineXStart, numberOfFramesDisplayed, ColorValues); %creating the color variation line object for original image
 ManipLine = ColorLine(manipulatedProps, ColorLineXStart, numberOfFramesDisplayed, ColorValues); %creating the color variation line object for manipulated image
 threeDOrig = ThreeDCluster(initialProps, ColorValues, 'Original 3D Cluster'); %creating the 3D cluster object for original image
