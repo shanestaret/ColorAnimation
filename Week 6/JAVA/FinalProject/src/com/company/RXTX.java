@@ -127,6 +127,7 @@ public class Project implements SerialPortEventListener {//Project class impleme
         9 is Black
         So if "maxColorIndex" is 7, that means the servo should point to the "Pink" color on the color wheel
          */
+	FileCreator.create(); //creates a file that contains the index that has the largest color proportion
 
 	
 		main.initialize();//starts main
