@@ -16,69 +16,69 @@ classdef ThreeDCluster < GraphInterface %implements the interface "GraphInterfac
 	        
 	        function createGraph(threeDObj) % function created to create a graph
                 %-----------------------------------------------------------------
-                firstClust = [randn(ceil(threeDObj.Data(1)),1) + 10, randn(ceil(threeDObj.Data(1)),1) + 10, randn(ceil(threeDObj.Data(1)),1) + 10]; 
+                firstClust = [randn(ceil(threeDObj.Data(1)),1) + 3, randn(ceil(threeDObj.Data(1)),1) + 6, randn(ceil(threeDObj.Data(1)),1) + 9]; 
 
-                secondClust = [randn(round(threeDObj.Data(2)),1) + 10, randn(round(threeDObj.Data(2)),1) + 10, randn(round(threeDObj.Data(2)),1) - 10];
+                secondClust = [randn(round(threeDObj.Data(2)),1) + 3, randn(round(threeDObj.Data(2)),1) + 6, randn(round(threeDObj.Data(2)),1) - 9];
 
-                thirdClust = [randn(round(threeDObj.Data(3)),1) + 10, randn(round(threeDObj.Data(3)),1) - 10, randn(round(threeDObj.Data(3)),1) + 10];
+                thirdClust = [randn(round(threeDObj.Data(3)),1) + 3, randn(round(threeDObj.Data(3)),1) - 6, randn(round(threeDObj.Data(3)),1) + 9];
 
-                fourthClust = [randn(round(threeDObj.Data(4)),1) + 10, randn(round(threeDObj.Data(4)),1) - 10, randn(round(threeDObj.Data(4)),1) - 10];
+                fourthClust = [randn(round(threeDObj.Data(4)),1) + 3, randn(round(threeDObj.Data(4)),1) - 6, randn(round(threeDObj.Data(4)),1) - 9];
 
-                fifthClust = [randn(round(threeDObj.Data(5)),1) - 10, randn(round(threeDObj.Data(5)),1) + 10, randn(round(threeDObj.Data(5)),1) + 10];
+                fifthClust = [randn(round(threeDObj.Data(5)),1) - 3, randn(round(threeDObj.Data(5)),1) + 6, randn(round(threeDObj.Data(5)),1) + 9];
 
-                sixthClust = [randn(round(threeDObj.Data(6)),1) - 10, randn(round(threeDObj.Data(6)),1) + 10, randn(round(threeDObj.Data(6)),1) - 10];
+                sixthClust = [randn(round(threeDObj.Data(6)),1) - 3, randn(round(threeDObj.Data(6)),1) + 6, randn(round(threeDObj.Data(6)),1) - 9];
 
-                seventhClust = [randn(round(threeDObj.Data(7)),1) - 10, randn(round(threeDObj.Data(7)),1) - 10, randn(round(threeDObj.Data(7)),1) + 10];
+                seventhClust = [randn(round(threeDObj.Data(7)),1) - 3, randn(round(threeDObj.Data(7)),1) - 6, randn(round(threeDObj.Data(7)),1) + 9];
 
-                eigthClust = [randn(round(threeDObj.Data(8)),1) - 10, randn(round(threeDObj.Data(8)),1) - 10, randn(round(threeDObj.Data(8)),1) - 10]; 
+                eigthClust = [randn(round(threeDObj.Data(8)),1) - 3, randn(round(threeDObj.Data(8)),1) - 6, randn(round(threeDObj.Data(8)),1) - 9]; 
 
-                ninthClust = [randn(round(threeDObj.Data(9)),1) + 20, randn(round(threeDObj.Data(9)),1) + 20, randn(round(threeDObj.Data(9)),1) + 20]; 
+                ninthClust = [randn(round(threeDObj.Data(9)),1) + 6, randn(round(threeDObj.Data(9)),1) + 3, randn(round(threeDObj.Data(9)),1) + 9]; 
 
-                tenthClust = [randn(round(threeDObj.Data(10)),1) + 20, randn(round(threeDObj.Data(10)),1) + 20, randn(round(threeDObj.Data(10)),1) - 20];
+                tenthClust = [randn(round(threeDObj.Data(10)),1) + 6, randn(round(threeDObj.Data(10)),1) + 3, randn(round(threeDObj.Data(10)),1) - 9];
 
-                eleventhClust = [randn(round(threeDObj.Data(11)),1) + 20, randn(round(threeDObj.Data(11)),1) - 20, randn(round(threeDObj.Data(11)),1) + 20]; 
+                eleventhClust = [randn(round(threeDObj.Data(11)),1) + 6, randn(round(threeDObj.Data(11)),1) - 3, randn(round(threeDObj.Data(11)),1) + 9]; 
 
-                twelfthClust = [randn(round(threeDObj.Data(12)),1) + 20, randn(round(threeDObj.Data(12)),1) - 20, randn(round(threeDObj.Data(12)),1) - 20]; 
+                twelfthClust = [randn(round(threeDObj.Data(12)),1) + 6, randn(round(threeDObj.Data(12)),1) - 3, randn(round(threeDObj.Data(12)),1) - 9]; 
 
-                thirteenthClust = [randn(round(threeDObj.Data(13)),1) - 20, randn(round(threeDObj.Data(13)),1) + 20, randn(round(threeDObj.Data(13)),1) + 20]; 
+                thirteenthClust = [randn(round(threeDObj.Data(13)),1) - 6, randn(round(threeDObj.Data(13)),1) + 3, randn(round(threeDObj.Data(13)),1) + 9]; 
 
-                fourteenthClust = [randn(round(threeDObj.Data(14)),1) - 20, randn(round(threeDObj.Data(14)),1) + 20, randn(round(threeDObj.Data(14)),1) - 20]; 
+                fourteenthClust = [randn(round(threeDObj.Data(14)),1) - 6, randn(round(threeDObj.Data(14)),1) + 3, randn(round(threeDObj.Data(14)),1) - 9]; 
 
-                fifteenthClust = [randn(round(threeDObj.Data(15)),1) - 20, randn(round(threeDObj.Data(15)),1) - 20, randn(round(threeDObj.Data(15)),1) + 20]; 
+                fifteenthClust = [randn(round(threeDObj.Data(15)),1) - 6, randn(round(threeDObj.Data(15)),1) - 3, randn(round(threeDObj.Data(15)),1) + 9]; 
 
-                sixteenthClust = [randn(round(threeDObj.Data(16)),1) - 20, randn(round(threeDObj.Data(16)),1) - 20, randn(round(threeDObj.Data(16)),1) - 20]; 
+                sixteenthClust = [randn(round(threeDObj.Data(16)),1) - 6, randn(round(threeDObj.Data(16)),1) - 3, randn(round(threeDObj.Data(16)),1) - 9]; 
 
-                seventeenthClust = [randn(round(threeDObj.Data(17)),1) + 30, randn(round(threeDObj.Data(17)),1) + 30, randn(round(threeDObj.Data(17)),1) + 30];
+                seventeenthClust = [randn(round(threeDObj.Data(17)),1) + 9, randn(round(threeDObj.Data(17)),1) + 6, randn(round(threeDObj.Data(17)),1) + 3];
 
-                eighteenthClust = [randn(round(threeDObj.Data(18)),1) + 30, randn(round(threeDObj.Data(18)),1) + 30, randn(round(threeDObj.Data(18)),1) - 30]; 
+                eighteenthClust = [randn(round(threeDObj.Data(18)),1) + 9, randn(round(threeDObj.Data(18)),1) + 6, randn(round(threeDObj.Data(18)),1) - 3]; 
 
-                ninteenthClust = [randn(round(threeDObj.Data(19)),1) + 30, randn(round(threeDObj.Data(19)),1) - 30, randn(round(threeDObj.Data(19)),1) + 30]; 
+                ninteenthClust = [randn(round(threeDObj.Data(19)),1) + 9, randn(round(threeDObj.Data(19)),1) - 6, randn(round(threeDObj.Data(19)),1) + 3]; 
 
-                twentythClust = [randn(round(threeDObj.Data(20)),1) + 30, randn(round(threeDObj.Data(20)),1) - 30, randn(round(threeDObj.Data(20)),1) - 30]; 
+                twentythClust = [randn(round(threeDObj.Data(20)),1) + 9, randn(round(threeDObj.Data(20)),1) - 6, randn(round(threeDObj.Data(20)),1) - 3]; 
 
-                twentyfirstClust = [randn(round(threeDObj.Data(21)),1) - 30, randn(round(threeDObj.Data(21)),1) + 30, randn(round(threeDObj.Data(21)),1) + 30]; 
+                twentyfirstClust = [randn(round(threeDObj.Data(21)),1) - 9, randn(round(threeDObj.Data(21)),1) + 6, randn(round(threeDObj.Data(21)),1) + 3]; 
 
-                twentysecondClust = [randn(round(threeDObj.Data(22)),1) - 30, randn(round(threeDObj.Data(22)),1) + 30, randn(round(threeDObj.Data(22)),1) - 30]; 
+                twentysecondClust = [randn(round(threeDObj.Data(22)),1) - 9, randn(round(threeDObj.Data(22)),1) + 6, randn(round(threeDObj.Data(22)),1) - 3]; 
 
-                twentythirdClust = [randn(round(threeDObj.Data(23)),1) - 30, randn(round(threeDObj.Data(23)),1) - 30, randn(round(threeDObj.Data(23)),1) + 30]; 
+                twentythirdClust = [randn(round(threeDObj.Data(23)),1) - 9, randn(round(threeDObj.Data(23)),1) - 6, randn(round(threeDObj.Data(23)),1) + 3]; 
 
-                twentyfourthClust = [randn(round(threeDObj.Data(24)),1) - 30, randn(round(threeDObj.Data(24)),1) - 30, randn(round(threeDObj.Data(24)),1) - 30]; 
+                twentyfourthClust = [randn(round(threeDObj.Data(24)),1) - 9, randn(round(threeDObj.Data(24)),1) - 6, randn(round(threeDObj.Data(24)),1) - 3]; 
 
-                twentyfifthClust = [randn(round(threeDObj.Data(25)),1) + 40, randn(round(threeDObj.Data(25)),1) + 40, randn(round(threeDObj.Data(25)),1) + 40]; 
+                twentyfifthClust = [randn(round(threeDObj.Data(25)),1) + 12, randn(round(threeDObj.Data(25)),1) + 3, randn(round(threeDObj.Data(25)),1) + 3]; 
 
-                twentysixthClust = [randn(round(threeDObj.Data(26)),1) + 40, randn(round(threeDObj.Data(26)),1) + 40, randn(round(threeDObj.Data(26)),1) - 40]; 
+                twentysixthClust = [randn(round(threeDObj.Data(26)),1) + 12, randn(round(threeDObj.Data(26)),1) + 3, randn(round(threeDObj.Data(26)),1) - 3]; 
 
-                twentyseventhClust = [randn(round(threeDObj.Data(27)),1) + 40, randn(round(threeDObj.Data(27)),1) - 40, randn(round(threeDObj.Data(27)),1) + 40];
+                twentyseventhClust = [randn(round(threeDObj.Data(27)),1) + 12, randn(round(threeDObj.Data(27)),1) - 3, randn(round(threeDObj.Data(27)),1) + 3];
 
-                twentyeigthClust = [randn(round(threeDObj.Data(28)),1) + 40, randn(round(threeDObj.Data(28)),1) - 40, randn(round(threeDObj.Data(28)),1) - 40]; 
+                twentyeigthClust = [randn(round(threeDObj.Data(28)),1) + 12, randn(round(threeDObj.Data(28)),1) - 3, randn(round(threeDObj.Data(28)),1) - 3]; 
 
-                twentyninthClust = [randn(round(threeDObj.Data(29)),1) - 40, randn(round(threeDObj.Data(29)),1) + 40, randn(round(threeDObj.Data(29)),1) + 40];
+                twentyninthClust = [randn(round(threeDObj.Data(29)),1) - 12, randn(round(threeDObj.Data(29)),1) + 3, randn(round(threeDObj.Data(29)),1) + 3];
 
-                thirtythClust = [randn(round(threeDObj.Data(30)),1) - 40, randn(round(threeDObj.Data(30)),1) + 40, randn(round(threeDObj.Data(30)),1) - 40];
+                thirtythClust = [randn(round(threeDObj.Data(30)),1) - 12, randn(round(threeDObj.Data(30)),1) + 3, randn(round(threeDObj.Data(30)),1) - 3];
 
-                thirtyfirstClust = [randn(round(threeDObj.Data(31)),1) - 40, randn(round(threeDObj.Data(31)),1) - 40, randn(round(threeDObj.Data(31)),1) + 40];
+                thirtyfirstClust = [randn(round(threeDObj.Data(31)),1) - 12, randn(round(threeDObj.Data(31)),1) - 3, randn(round(threeDObj.Data(31)),1) + 3];
 
-                thirtysecondClust = [randn(ceil(threeDObj.Data(32)),1) - 40, randn(ceil(threeDObj.Data(32)),1) - 40, randn(ceil(threeDObj.Data(32)),1) - 40];
+                thirtysecondClust = [randn(ceil(threeDObj.Data(32)),1) - 12, randn(ceil(threeDObj.Data(32)),1) - 3, randn(ceil(threeDObj.Data(32)),1) - 3];
                 
                 %EXPLANATION OF CODE UP TO HYPHENATED LINE
                 %Each variable is a matrix whose size is determined by the
