@@ -50,7 +50,7 @@ ________________________________________________________________________________
    * ###### created MATLAB and Java section of our final video
 ________________________________________________________________________________________________________________________________
 
-#### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
+## We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
 
 * [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
 * [Google Hangouts Conversation](https://hangouts.google.com/group/vYaHYCTixmCaNGMp1) NOTE: You will join the conversation and will be able to read all previous messages we sent
