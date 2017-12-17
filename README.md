@@ -42,8 +42,8 @@ ________________________________________________________________________________
    * ###### asked for help with code on forums (Reddit, Stack Overflow, etc.)
    * ###### created video describing all code
    * ###### created most of Java code
-     * implemented code that would allow MATLAB and Java to communicate through text files
-     * created code that would specifically manipulate the Arduino based on color proportions obtained from MATLAB
+     * ###### implemented code that would allow MATLAB and Java to communicate through text files
+     * ###### created code that would specifically manipulate the Arduino based on color proportions obtained from MATLAB
    * ###### created GitHub Pages website
    * ###### created JavaDoc
    * ###### commented code for MATLAB and Java
