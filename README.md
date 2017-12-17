@@ -1,7 +1,6 @@
 # Color Animation
 ###### Official CIS111B Final Project by [Shane Staret](https://github.com/SStaret43), [Yao Sedzro](https://github.com/Yensedzro), and [Trush Patel](https://github.com/trushpatel1997). Created through the use of MATLAB, Java, and Arduino.
-
-###### *We'd like to thank [Theodore Gray](http://home.theodoregray.com/), [Professor Kendall Martin](http://lelejiktenkye.blogspot.com/), and [Professor Robert Moyer](http://faculty.mc3.edu/rmoyer/) for helping us throughout this project.*
+###### *Before this all started, we didn’t even know how to write a single line of code in MATLAB, but through perseverance, hard work, and most importantly all the help we got on the way we were able to make an awesome project. We'd like to thank [Theodore Gray](http://home.theodoregray.com/), [Professor Kendall Martin](http://lelejiktenkye.blogspot.com/), and [Professor Robert Moyer](http://faculty.mc3.edu/rmoyer/) for helping us throughout this project, if it wasn’t for them none of this would have been possible.*
 ________________________________________________________________________________________________________________________________
 
 #### Essentially, our project can take any image or video (in an appropriate format) and grab each individual pixel. From there, we can determine the RGB values of each pixel and then deduce the proportion of each color (we used 32 colors for simplicity) in every individual frame. We can also manipulate each frame so that it is composed of different colors and then deduce the proportions of the manipulated image as well. A color line, bar graphs, and three-D cluster plots were used to present the information we gathered about each frame from our code.
