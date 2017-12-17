@@ -10,4 +10,3 @@
 * [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
 * [Google Hangouts Conversation](https://hangouts.google.com/group/vYaHYCTixmCaNGMp1) NOTE: You will join the conversation and will be able to read all previous messages we sent
 * [Freedcamp Page](https://freedcamp.com/CIS_111B_Final_Proje_sX0/A_Project_IzH/todos)
-<p>Some Markdown text with <span style="color:blue">some <em>blue</em> text</span>.</p>
