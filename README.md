@@ -9,7 +9,7 @@ ________________________________________________________________________________
 #### MATLAB was the program we used to process each frame. Every individual figure produced by MATLAB was sent to Java within a folder and then Java presented these figures within a GUI after the video/image was finished processing in MATLAB. The main reason for this was that it could take hours for MATLAB to process a video and show the results, but in Java, we could show each frame in seconds because they were all already processed within MATLAB. The color proportions of each frame were also determined in MATLAB, then sent to Java through a text file, as we wanted to use Java to manipulate the Arduino. With the Arduino, we programmed a servo to move to certain positions depending on which color had the greatest proportion within a frame.
 ________________________________________________________________________________________________________________________________
 
-## 1. **Project Manager: Yao Sedzro**
+## **Project Manager: Yao Sedzro**
    * ###### created project timeline for all six weeks
    * ###### directed group in specific direction
    * ###### ensured we were all during our part of the project in a timely manner
@@ -22,7 +22,7 @@ ________________________________________________________________________________
    * ###### helped with code whenever possible
    
    
-## 2. **Documenter: Trush Patel**
+## **Documenter: Trush Patel**
    * ###### created *detailed* documentation of what was accomplished every week
    * ###### described every individual task that we had done throughout the project
    * ###### researched APIs that could be used within MATLAB/Java
@@ -35,7 +35,7 @@ ________________________________________________________________________________
    * ###### created the Arduino section of our final video
    
    
-## 3. **Lead Programmer: Shane Staret**
+## **Lead Programmer: Shane Staret**
    * ###### managed FreedCamp Page and GitHub Page
    * ###### created all MATLAB code
    * ###### tested, designed, and implemented new code
