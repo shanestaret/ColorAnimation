@@ -33,7 +33,7 @@ ________________________________________________________________________________
    * ###### helped comment code for MATLAB and Java, and completely commented code for Arduino
    * ###### created the Arduino section of our final video
    
-#### - Lead Programmer: Shane Staret
+3. **Lead Programmer: Shane Staret**
    * ###### managed FreedCamp Page and GitHub Page
    * ###### created all MATLAB code
    * ###### tested, designed, and implemented new code
