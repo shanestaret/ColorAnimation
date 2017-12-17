@@ -1,4 +1,4 @@
-# ColorAnimation
+# Color Animation
 #### The official CIS111B Final Project by Yao Sedzro, Shane Staret, and Trush Patel. Created through the use of MATLAB, Java, and Arduino.
 
 #### Essentially, our project can take any image or video (in an appropriate format) and grab each individual pixel. From there, we can determine the RGB values of each pixel and then deduce the proportion of each color (we used 32 colors for simplicity) in every individual frame. We can also manipulate each frame so that it is composed of different colors and then deduce the proportions of the manipulated image as well. A color line, bar graphs, and three-D cluster plots were used to present the information we gathered about each frame from our code.
@@ -10,3 +10,4 @@
 * [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
 * [Google Hangouts Conversation](https://hangouts.google.com/group/vYaHYCTixmCaNGMp1) NOTE: You will join the conversation and will be able to read all previous messages we sent
 * [Freedcamp Page](https://freedcamp.com/CIS_111B_Final_Proje_sX0/A_Project_IzH/todos)
+<span style="color:blue">some *blue* text</span>
