@@ -18,10 +18,31 @@ ________________________________________________________________________________
    * ###### communicated with those in power or others who we needed help/advice from
    * ###### obtained access to equipment (arduinos and raspberry pis)
    * ###### created design document
+   * ###### edited final project video
    * ###### helped with code whenever possible
    
-2. *Documenter: Trush Patel*
+2. **Documenter: Trush Patel**
+   * ###### created *detailed* documentation of what was accomplished every week
+   * ###### described every individual task that we had done throughout the project
+   * ###### researched APIs that could be used within MATLAB/Java
+   * ###### researched practical applications of our project
+   * ###### designed the initial prototype of our project and GUI
+   * ###### tested code and asked for help with code on forums (Reddit, Stack Overflow, etc.)
+   * ###### created portion code that would allow Java to manipulate an Arduino
+   * ###### created code to manipulate Arduino with Arduino code.
+   * ###### helped comment code for MATLAB and Java, and completely commented code for Arduino
+   
 #### - Lead Programmer: Shane Staret
+   * ###### managed FreedCamp Page and GitHub Page
+   * ###### created all MATLAB code
+   * ###### tested, designed, and implemented new code
+   * ###### asked for help with code on forums (Reddit, Stack Overflow, etc.)
+   * ###### created video describing all code
+   * ###### created most of Java code
+     * ###### fsdfsdf
+   * ###### created GitHub Pages website
+   * ###### created JavaDoc
+   * ###### commented code for MATLAB
 
 ###### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
 
