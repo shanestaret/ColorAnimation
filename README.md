@@ -12,7 +12,7 @@ ________________________________________________________________________________
 ## **Project Manager: Yao Sedzro**
    * ###### created project timeline for all six weeks
    * ###### directed group in specific direction
-   * ###### ensured we were all during our part of the project in a timely manner
+   * ###### ensured we were all doing our part of the project in a timely manner
    * ###### searched for different communication/documentation tools
    * ###### set up and planned meetings
    * ###### communicated with those in power or others who we needed help/advice from
