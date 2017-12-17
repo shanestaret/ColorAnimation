@@ -7,6 +7,11 @@
 
 #### MATLAB was the program we used to process each frame. Every individual figure produced by MATLAB was sent to Java within a folder and then Java presented these figures within a GUI after the video/image was finished processing in MATLAB. The main reason for this was that it could take hours for MATLAB to process a video and show the results, but in Java, we could show each frame in seconds because they were all already processed within MATLAB. The color proportions of each frame were also determined in MATLAB, then sent to Java through a text file, as we wanted to use Java to manipulate the Arduino. With the Arduino, we programmed a servo to move to certain positions depending on which color had the greatest proportion within a frame.
 
+#### - Project Manager: Yao Sedzro
+        * ###### dfsdfsd
+#### - Documenter: Trush Patel
+#### - Lead Programmer: Shane Staret
+
 ###### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
 
 * [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
