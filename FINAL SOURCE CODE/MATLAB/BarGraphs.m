@@ -1,8 +1,16 @@
 classdef BarGraphs < GraphInterface %implements the interface "GraphInterface"; to create bar graphs
-    
+    % BarGraphs A class that creates the plot that a bar graph will go on
+    % and creates a bar graph with every individual bar representing one of
+    % the 32 colors that can appear in our images
+    % A bar graph is created with every individual bar representing one of
+    % the 32 colors we are looking for. The x-axis is all of the possible
+    % colors, whereas the y-axis represents a percentage. The bar will be
+    % as tall as whatever percentage it composed. So if the image is 92%
+    % black, then the black bar in the bar graph will be of height 92.
     properties
         BarWidth
         ColorNames %defining all important properties that need to be defined in constructor specifically
+        Plot
     end
     
     methods

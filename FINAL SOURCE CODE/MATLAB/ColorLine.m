@@ -1,4 +1,16 @@
 classdef ColorLine %class to create color variation line
+    % ColorLine Displays a color line showing all previous frame's color
+    % composition and the current frame's color composition
+    %   Rectangles were created that represented each color. These
+    %   rectangles were stacked on top of one another almost to represent a
+    %   stacked bar graph, where each rectangle would represent the
+    %   percentage of a color within the frame. White and Dark Grey are the
+    %   first two rectangles created, so let's say that White was 10% of
+    %   the frame and dark grey was 5%. A rectangle for white will go from
+    %   y = 0 to y = 10, whereas the rectangle for Dark Grey will be placed
+    %   on top, going from y = 10 to y = 15. The total color line always
+    %   ends up going to y = 100, as the total percentage cannot be any
+    %   less or more than 100%.
     
     properties
         ColorProps

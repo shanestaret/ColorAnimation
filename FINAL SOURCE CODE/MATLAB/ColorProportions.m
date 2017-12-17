@@ -1,5 +1,12 @@
 classdef ColorProportions %class to determine the color of each pixel and the overall proportion of each color in an image
-    
+    % ColorProportions This class read through every individual pixel in a
+    % frame, determining the percentage of each color within each
+    % individual frame
+    % After obtaining the resolution of the image, three arrays were
+    % created to represent the RGB values. The R array, G array, and B
+    % array. We then allighned these arrays within a single matrix, so that
+    % one row composed of a single pixel's R, G, and B value. Then, based
+    % on those three values, we determined exactly what color it was (32 colors were used for simplicity).
     properties
         img %defining all important properties that need to be defined in constructor specifically
         ColorNames

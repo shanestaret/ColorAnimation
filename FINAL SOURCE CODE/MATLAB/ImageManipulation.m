@@ -1,5 +1,11 @@
 classdef ImageManipulation %class to manipulate an image given
-
+    % ImageManipulation Manipulates orignal image to look differently
+    %   Essentially, this class takes a duplicated image and changes its
+    %   color structure so that it can be manipulated. We change it from
+    %   RGB format to LAB format, and then decrease its brightness and we
+    %   change the green values to red. Then we change it back to RGB
+    %   format, where all of the processes on the original image also take
+    %   place on the manipulated image
     
     properties
         imageToManip

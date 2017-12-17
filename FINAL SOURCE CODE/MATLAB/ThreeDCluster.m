@@ -1,11 +1,18 @@
 classdef ThreeDCluster < GraphInterface %implements the interface "GraphInterface"; creates a 3D plot
-	    
+        % ThreeDCluster Class that creates a 3D cluster plot for the original
+        % and manipulated image
+        %Essentially, this class determines a specific area where a cluster
+        %of dots will reside for every color. We worked with thirty two
+        %colors, therefore, there are possibly thirty clusters that could
+        %display on the graph. Each dot represents 1% composition of a
+        %specific color in a frame. So if an image is 10% black, then ten
+        %black dots will appear in a cluster.
 	    properties
             zLabel %zLabel property meant for labeling z axis of the 3D plot
         end % Terminates block of code
 	    
 	    methods
-	        function threeDObj = ThreeDCluster(d,c,t);      
+	        function threeDObj = ThreeDCluster(d,c,t)     
 	            threeDObj.Data = d; %the color proportions of the image
 	            threeDObj.Title = t; %title of Graph
                 threeDObj.ColorValues = c; %the actual RGB values of every color represented

@@ -3,7 +3,7 @@ clear all %deletes all values in previous variables
 clc %clearing the command window just to make life easier
 close all %closes all figures/files
 folder = fullfile('C:\Users\Shane\Desktop\MATLAB'); %locating the folder of the desired image
-fileDesired = 'ColorsSong.mp4'; %giving the desired name of the file we want
+fileDesired = 'TrippyVisual.mp4'; %giving the desired name of the file we want
 fullPath = fullfile(folder, fileDesired); %assigning the filename based to the rest of the path (C:\Users\Shane\Desktop\MATLAB)
 % Get the full filename, along with the path in which it exists
     if ~exist(fullPath, 'file')
@@ -23,6 +23,9 @@ if(isAVid) %so we can specify in the folder name whether we are looking at a vid
 newFolderName = strcat(char(newFolderNameArray(1)), ' (video)'); %the final folder name, which is just the name of the video, so instead of "hey.jpg", its just "hey"
 elseif(isAnImage) %so we can specify in the folder name whether we are looking at a video or an image
 newFolderName = strcat(char(newFolderNameArray(1)), ' (image)'); %the final folder name, which is just the name of the image, so instead of "hey.mp4", its just "hey"
+end
+if(exist(newFolderName,'dir') == 7)
+    rmdir(strcat(folder, '\', newFolderName), 's'); %deleting folder if it already exists so we can properly overwrite it
 end
 mkdir(newFolderName); %actually creating the folder with the name we want
 
@@ -50,7 +53,7 @@ allInfo = VideoReader(fileDesired); %retrieves A LOT more info about the video
 totalFrames = round(allInfo.Duration * frameRate); %Get the total number of frames in the video by multiplying its duration and seconds by frames per second
 
 oneFrameFromVid = step(videoObj); % Get individual video frames
-skippableFrames = 50; %the number of frames we want to skip per iteration; if it is "10", then we look at the first, eleventh, twenty-first, thirty-first, ... frame
+skippableFrames = 250; %the number of frames we want to skip per iteration; if it is "10", then we look at the first, eleventh, twenty-first, thirty-first, ... frame
 numberOfFramesDisplayed = ceil(totalFrames/skippableFrames); %the total number of frames that will be displayed on the figure; this changes depending on the number of frames in the video and how many we will skip
 end
 
