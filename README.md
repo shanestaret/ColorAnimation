@@ -21,6 +21,7 @@ ________________________________________________________________________________
    * ###### edited final project video
    * ###### helped with code whenever possible
    
+   
 2. **Documenter: Trush Patel**
    * ###### created *detailed* documentation of what was accomplished every week
    * ###### described every individual task that we had done throughout the project
@@ -32,6 +33,7 @@ ________________________________________________________________________________
    * ###### created code to manipulate Arduino with Arduino code.
    * ###### helped comment code for MATLAB and Java, and completely commented code for Arduino
    * ###### created the Arduino section of our final video
+   
    
 3. **Lead Programmer: Shane Staret**
    * ###### managed FreedCamp Page and GitHub Page
