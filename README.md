@@ -31,6 +31,7 @@ ________________________________________________________________________________
    * ###### created portion code that would allow Java to manipulate an Arduino
    * ###### created code to manipulate Arduino with Arduino code.
    * ###### helped comment code for MATLAB and Java, and completely commented code for Arduino
+   * ###### created the Arduino section of our final video
    
 #### - Lead Programmer: Shane Staret
    * ###### managed FreedCamp Page and GitHub Page
@@ -39,10 +40,12 @@ ________________________________________________________________________________
    * ###### asked for help with code on forums (Reddit, Stack Overflow, etc.)
    * ###### created video describing all code
    * ###### created most of Java code
-     * ###### fsdfsdf
+     * implemented code that would allow MATLAB and Java to communicate through text files
+     * created code that would specifically manipulate the Arduino based on color proportions obtained from MATLAB
    * ###### created GitHub Pages website
    * ###### created JavaDoc
-   * ###### commented code for MATLAB
+   * ###### commented code for MATLAB and Java
+   * ###### created MATLAB and Java section of our final video
 
 ###### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
 
