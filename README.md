@@ -48,6 +48,7 @@ ________________________________________________________________________________
    * ###### created JavaDoc
    * ###### commented code for MATLAB and Java
    * ###### created MATLAB and Java section of our final video
+________________________________________________________________________________________________________________________________
 
 ###### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
 
