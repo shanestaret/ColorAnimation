@@ -3,7 +3,7 @@ clear all %deletes all values in previous variables
 clc %clearing the command window just to make life easier
 close all %closes all figures/files
 folder = fullfile('C:\Users\Shane\Desktop\MATLAB'); %locating the folder of the desired image
-fileDesired = 'TrippyVisual.mp4'; %giving the desired name of the file we want
+fileDesired = 'DisneyColorfulLogo.jpg'; %giving the desired name of the file we want
 fullPath = fullfile(folder, fileDesired); %assigning the filename based to the rest of the path (C:\Users\Shane\Desktop\MATLAB)
 % Get the full filename, along with the path in which it exists
     if ~exist(fullPath, 'file')
@@ -25,6 +25,11 @@ elseif(isAnImage) %so we can specify in the folder name whether we are looking a
 newFolderName = strcat(char(newFolderNameArray(1)), ' (image)'); %the final folder name, which is just the name of the image, so instead of "hey.mp4", its just "hey"
 end
 if(exist(newFolderName,'dir') == 7)
+    error = sprintf('%s already exists. Are you sure you want to overwrite it?', strcat(folder, '\', newFolderName)); %tell the user the file already exists, and if they really want to overwrite it
+    dialog = questdlg(error, 'Overwrite?', 'Yes', 'No', 'Yes'); %creates dialog box asking if the user wants to overwrite the file, "yes" and "no"
+    if(strcmp(dialog, 'No')) %if user does not want to overwrite file
+        return; %stop code
+    end
     rmdir(strcat(folder, '\', newFolderName), 's'); %deleting folder if it already exists so we can properly overwrite it
 end
 mkdir(newFolderName); %actually creating the folder with the name we want
