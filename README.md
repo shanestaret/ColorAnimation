@@ -1,10 +1,15 @@
 # Color Animation
 ###### Official CIS111B Final Project by [Shane Staret](https://github.com/SStaret43), [Yao Sedzro](https://github.com/Yensedzro), and [Trush Patel](https://github.com/trushpatel1997). Created through the use of MATLAB, Java, and Arduino.
 
-###### This is a [*very* in depth video](https://www.youtube.com/watch?v=NfeG2EDdjmE) explaining every line of our MATLAB code (doesn't show the final code but it is similar). And here's my [YouTube channel](https://www.youtube.com/channel/UCmQA16swmtPa29pRo9YtRTA).
-
 ###### Before this all started, we didn’t even know how to write a single line of code in MATLAB, but through perseverance, hard work, and most importantly all the help we got on the way we were able to make an awesome project.
 ###### *We'd like to thank [Theodore Gray](http://home.theodoregray.com/), [Professor Kendall Martin](http://lelejiktenkye.blogspot.com/), and [Professor Robert Moyer](http://faculty.mc3.edu/rmoyer/) for helping us throughout this project, if it wasn’t for them none of this would have been possible.*
+________________________________________________________________________________________________________________________________
+
+### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
+###### This is a [*very* in depth video](https://www.youtube.com/watch?v=NfeG2EDdjmE) explaining every line of our MATLAB code (doesn't show the final code but it is similar). And here's my [YouTube channel](https://www.youtube.com/channel/UCmQA16swmtPa29pRo9YtRTA).
+* [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
+* [Google Hangouts Conversation](https://hangouts.google.com/group/vYaHYCTixmCaNGMp1) NOTE: You will join the conversation and will be able to read all previous messages we sent
+* [Freedcamp Page](https://freedcamp.com/CIS_111B_Final_Proje_sX0/A_Project_IzH/todos)
 ________________________________________________________________________________________________________________________________
 
 #### Essentially, our Color Animation project takes any image or video (in an appropriate format) and grabs each individual pixel. From there, we can determine the RGB values of each pixel and then deduce the proportion of each color. We used 32 colors ranging from navy blue, to ultra light pink in order to show distinct color variations of an image or film. We also manipulated each frame so that it is composed of different colors and then deduced the proportions of the manipulated image as well. We presented our data in color lines, bar graphs, and three-D clustering plots.
@@ -52,9 +57,3 @@ ________________________________________________________________________________
    * ###### commented code for MATLAB and Java
    * ###### created MATLAB and Java section of our final video
 ________________________________________________________________________________________________________________________________
-
-### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo).
-
-* [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
-* [Google Hangouts Conversation](https://hangouts.google.com/group/vYaHYCTixmCaNGMp1) NOTE: You will join the conversation and will be able to read all previous messages we sent
-* [Freedcamp Page](https://freedcamp.com/CIS_111B_Final_Proje_sX0/A_Project_IzH/todos)
