@@ -6,7 +6,7 @@
 ________________________________________________________________________________________________________________________________
 
 #### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo). On the flipside, this is a [*very* in depth video](https://www.youtube.com/watch?v=NfeG2EDdjmE) explaining every line of our MATLAB code (doesn't show the final code but it is similar). 
-* [YouTube channel](https://www.youtube.com/channel/UCmQA16swmtPa29pRo9YtRTA).
+* [YouTube channel](https://www.youtube.com/channel/UCmQA16swmtPa29pRo9YtRTA)
 * [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
 * [Google Hangouts Conversation](https://hangouts.google.com/group/vYaHYCTixmCaNGMp1) NOTE: You will join the conversation and will be able to read all previous messages we sent
 * [Freedcamp Page](https://freedcamp.com/CIS_111B_Final_Proje_sX0/A_Project_IzH/todos)
