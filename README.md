@@ -59,5 +59,5 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________
 ## **Pictures & Examples**
 
-#### The (admittedly poor quality) GIF below shows an example of a video ran through our program. The top left shows each frame in the video and you can see the color line get longer as the GIF proceeds because it is processing more frames of the video.
+#### The (admittedly poor quality) GIF below shows an example of a video ran through our program. The top left shows each frame in the video and you can see the color line get longer as the GIF proceeds because it is processing more frames of the video.The top right shows the manipulated frame and the two bottom plots are the 3D cluster plots, where the amount of dots of a specific color are determined by their proportion in each frame. So, if the image is 20% black, then there will be 20 dots in the 3D cluster plot.
 ![GIF showing how an example of a short video ran through our program](https://media.giphy.com/media/jyAY8YrPZra2KMnLH3/giphy.gif)
