@@ -63,5 +63,8 @@ ________________________________________________________________________________
 ![GIF showing how an example of a short video ran through our program](https://media.giphy.com/media/jyAY8YrPZra2KMnLH3/giphy.gif)
 ![GIF showing how an example of a short video ran through our program](https://media.giphy.com/media/28aHEsTDXd8mQWKYRM/giphy.gif)
 
-#### The images below are examples of pictures that ran through our program. The layout is identical to the video above.
+#### The images below are examples of pictures that ran through our program. The layout is identical to the GIFs above.
 ![Picture showing how an example of an image ran through our program](ExamplePictures/ColorWheel/Frame1Main.png)
+![Picture showing how an example of an image ran through our program](ExamplePictures/ColorWheel/Frame1Bar.png)
+![Picture showing how an example of an image ran through our program](ExamplePictures/Wallpaper/Frame1Main.png)
+![Picture showing how an example of an image ran through our program](ExamplePictures/Wallpaper/Frame1Bar.png)
