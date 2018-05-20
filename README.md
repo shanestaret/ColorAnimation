@@ -64,4 +64,4 @@ ________________________________________________________________________________
 ![GIF showing how an example of a short video ran through our program](https://media.giphy.com/media/28aHEsTDXd8mQWKYRM/giphy.gif)
 
 #### The images below are examples of pictures that ran through our program. The layout is identical to the video above.
-![Picture showing how an example of an image ran through our program](Example Pictures/ColorWheel (image)/Frame1Bars.png)
+![Picture showing how an example of an image ran through our program](ExamplePictures/ColorWheel/Frame1Main.png)
