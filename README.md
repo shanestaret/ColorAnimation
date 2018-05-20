@@ -59,4 +59,5 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________
 ## **Pictures & Examples**
 
+#### The (admittedly poor quality) GIF below shows an example of a video ran through our program. The top left shows each frame in the video and you can see the color line get longer as the GIF proceeds because it is processing more frames of the video.
 ![GIF showing how an example of a short video ran through our program](https://media.giphy.com/media/jyAY8YrPZra2KMnLH3/giphy.gif)
