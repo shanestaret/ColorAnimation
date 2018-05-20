@@ -59,4 +59,4 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________
 ## **Pictures & Examples**
 
-
+![GIF showing how an example of a short video ran through our program](https://media.giphy.com/media/jyAY8YrPZra2KMnLH3/giphy.gif)
