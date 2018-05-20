@@ -66,10 +66,7 @@ ________________________________________________________________________________
 #### The images below are examples of pictures that ran through our program. The layout is identical to the GIFs above.
 ![Picture showing how an example of an image ran through our program](ExamplePictures/ColorWheel/Frame1Main.png)
 ![Picture showing how an example of an image ran through our program](ExamplePictures/ColorWheel/Frame1Bars.png)
-* 
-* 
-* 
-* 
-* 
+
+
 ![Picture showing how an example of an image ran through our program](ExamplePictures/Wallpaper/Frame1Main.png)
 ![Picture showing how an example of an image ran through our program](ExamplePictures/Wallpaper/Frame1Bars.png)
