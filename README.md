@@ -5,6 +5,8 @@
 ###### *We'd like to thank [Theodore Gray](http://home.theodoregray.com/), [Professor Kendall Martin](http://lelejiktenkye.blogspot.com/), and [Professor Robert Moyer](http://faculty.mc3.edu/rmoyer/) for helping us throughout this project, if it wasn’t for them none of this would have been possible.*
 ________________________________________________________________________________________________________________________________
 
+## **Resources**
+
 #### We give a run down of what we have done for the past six weeks and present our code output within [this short video](https://www.youtube.com/watch?v=CgzbIqppAzo). On the flipside, this is a [*very* in depth video](https://www.youtube.com/watch?v=NfeG2EDdjmE) explaining every line of our MATLAB code (doesn't show the final code but it is similar). 
 * [YouTube channel](https://www.youtube.com/channel/UCmQA16swmtPa29pRo9YtRTA)
 * [JavaDoc](https://sstaret43.github.io/ColorAnimation/)
@@ -12,12 +14,16 @@ ________________________________________________________________________________
 * [Freedcamp Page](https://freedcamp.com/CIS_111B_Final_Proje_sX0/A_Project_IzH/todos)
 ________________________________________________________________________________________________________________________________
 
+## **Explanation**
+
 #### Essentially, our Color Animation project takes any image or video (in an appropriate format) and grabs each individual pixel. From there, we can determine the RGB values of each pixel and then deduce the proportion of each color. We used 32 colors ranging from navy blue, to ultra light pink in order to show distinct color variations of an image or film. We also manipulated each frame so that it is composed of different colors and then deduced the proportions of the manipulated image as well. We presented our data in color lines, bar graphs, and three-D clustering plots.
 
 #### MATLAB was the programming language we used to process each frame. Every individual figure produced by MATLAB was sent to Java within a folder and then Java presented these figures within a GUI after the video/image was finished processing in MATLAB. The reason we did this was due to the fact that java was more time efficient in showing our results, it was faster, and a lot of clearer as shown in our video. The color proportions of each frame were also determined in MATLAB, then sent to Java through a text file, as we wanted to use Java to manipulate the Arduino. With the Arduino, we programmed a servo to move to certain positions depending on which color had the greatest proportion within a frame.
 ________________________________________________________________________________________________________________________________
 
-## **Project Manager: Yao Sedzro**
+## **The Squad**
+
+### **Project Manager: Yao Sedzro**
    * ###### created project timeline for all six weeks
    * ###### directed group in specific direction
    * ###### ensured we were all doing our part of the project in a timely manner
@@ -30,7 +36,7 @@ ________________________________________________________________________________
    * ###### helped with code whenever possible
    
    
-## **Documenter: Trush Patel**
+### **Documenter: Trush Patel**
    * ###### created *detailed* documentation of what was accomplished every week
    * ###### described every individual task that we had done throughout the project
    * ###### researched APIs that could be used within MATLAB/Java
@@ -43,7 +49,7 @@ ________________________________________________________________________________
    * ###### created the Arduino section of our final video
    
    
-## **Lead Programmer: Shane Staret**
+### **Lead Programmer: Shane Staret**
    * ###### managed FreedCamp Page and GitHub Page
    * ###### created all MATLAB code
    * ###### tested, designed, and implemented new code
